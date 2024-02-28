@@ -1,0 +1,78 @@
+package com.student.model;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "student")
+public class student {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long sid;
+	
+	
+	@Column(name = "sname")
+	private String sname;
+	
+	@Column(name="saddress")
+	private String saddress;
+	
+	@Column(name="sfield")
+	private String sfield;
+
+	public Long getSid() {
+		return sid;
+	}
+
+	public void setSid(Long sid) {
+		this.sid = sid;
+	}
+
+	public String getSname() {
+		return sname;
+	}
+
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+
+	public String getSaddress() {
+		return saddress;
+	}
+
+	public void setSaddress(String saddress) {
+		this.saddress = saddress;
+	}
+
+	public String getSfield() {
+		return sfield;
+	}
+
+	public void setSfield(String sfield) {
+		this.sfield = sfield;
+	}
+
+	public student(Long sid, String sname, String saddress, String sfield) {
+		super();
+		this.sid = sid;
+		this.sname = sname;
+		this.saddress = saddress;
+		this.sfield = sfield;
+	}
+	
+	public student() {
+		
+	}
+
+	@Override
+	public String toString() {
+		return "student [sid=" + sid + ", sname=" + sname + ", saddress=" + saddress + ", sfield=" + sfield + "]";
+	}
+	
+	
+}
