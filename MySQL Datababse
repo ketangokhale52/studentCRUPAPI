@@ -1,0 +1,11 @@
+create database content;
+show databases;
+
+
+create table content.student(sid int,sname varchar(10),saddress varchar(30),sfield varchar(20));
+insert into content.student values(101,'Ketan','Pune','computer engineering');
+insert into content.student values(102,'Pratik','Nashik','IT engineering');
+insert into content.student values(103,'Sangram','Nagpur','e&tc engineering');
+insert into content.student values(104,'vishal','kolhapur','instr engineering');
+
+//Select * from content.student;
